@@ -11,6 +11,29 @@ body {
     background-position: top center;
   }
   
+  pre,
+  code {
+    background-color: #fafaff;
+    border: 1px solid #c6c4f4;
+    border-radius: 4px;
+    color: #3632ad;
+    font-family: "Courier New", "Courier", monospace;
+  }
+  
+  pre {
+    padding: 5px;
+  }
+  
+  code {
+    padding: 2px 5px;
+  }
+  
+  pre code {
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+  }
+
   .container {
     max-width: 928px;
     margin: 0 auto;
@@ -19,8 +42,9 @@ body {
   
   .page-header {
     margin: 0 0 160px;
-    padding: 32px 0 32px;
+    padding: 16px 0 32px;
     background: linear-gradient(180deg, rgba(242,244,246,.8) 0%, rgba(242,244,246,.9) 20%, rgba(242,244,246,1) 50%, rgba(242,244,246,.6) 80%, rgba(242,244,246,.1) 100%);
+    
   }
   
   .page-header .container,
@@ -47,6 +71,17 @@ body {
     background-image: url("image/icon/icon-phone-header.svg");
   }
   
+.header-discord {
+  padding-left: 25px;
+  background-image: url("image/icon/icon-discord-header.svg");
+  background-size: 21px;
+}
+
+.header-linkedin {
+  padding-left: 90px;
+  background-image: url("image/icon/icon-linkedin-header.svg");
+}
+
   .hero-image {
     margin-bottom: 620px;
   }
@@ -100,9 +135,10 @@ body {
   }
   
   .page-footer {
-    padding: 40px 0;
+    padding: 10px 0;
     background-color: #00417d;
     color: #ffffff;
+    text-align: center;
   }
   
   .page-footer a {
@@ -121,4 +157,15 @@ body {
   .footer-phone {
     padding-left: 25px;
     background-image: url("image/icon/icon-phone-footer.svg");
+  }
+
+  .footer-github {
+    padding-left: 25px;
+    background-image: url("image/icon/icon-github-footer.svg");
+  }
+  
+  .footer-rsschool {
+    padding-left: 50px;
+    background-image: url("https://rs.school/images/rs_school_js.svg");
+    filter: invert(100%);
   }
