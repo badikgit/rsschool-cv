@@ -86,7 +86,7 @@ body {
 }
   
 .heading {
-  margin: 0 0 20px;
+  margin: 70px 0 20px;
   font-family: "Old Standard TT", "Times", "Times New Roman", serif;
   font-size: 88px;
   line-height: 120%;
@@ -165,13 +165,11 @@ pre, code {
   border-radius: 10px;
   color: #2400bb;
   font-family: "Courier New", "Courier", monospace;
-  
   line-height: 120%;
 }
   
 pre {
-  padding: 5px;
-  
+  padding: 5px; 
 }
   
 code {
