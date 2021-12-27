@@ -4,19 +4,22 @@
 <head>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Old+Standard+TT&display=swap&subset=cyrillic"
-        rel="stylesheet">
+    
     <title>CV#2. HTML, CSS & Git Basics. Stanislau Yarotski</title>
 </head>
 
 <body>
+
     <header class="page-header">
+        <a id="contacts"></a>
         <div class="container">
-            <a class="header-email" href="mailto:stas_yar@tut.by">stas_yar@tut.by</a>
-            <a class="header-phone" href="tel:+375292954762">+375 29 295 47 62</a>
-            <a class="header-discord" href="https://discordapp.com/users/399246428871983114/">truecki#6712</a>
-            <a class="header-linkedin" href="https://www.linkedin.com/in/yarotski-stanislau/">Stanislau Yarotski</a>
+            <ul class="header-contacts-list">
+                <li>Contacts:</li>
+                <li><a class="header-email" href="mailto:stas_yar@tut.by">stas_yar@tut.by</a></li>
+                <li><a class="header-phone" href="tel:+375292954762">+375(29)2954762</a></li>
+                <li><a class="header-discord" href="https://discordapp.com/users/399246428871983114/">truecki#6712</a></li>
+                <li><a class="header-linkedin" href="https://www.linkedin.com/in/yarotski-stanislau/">Stanislau Yarotski</a></li>
+            </ul>
         </div>
     </header>
 
@@ -29,28 +32,27 @@
 
     <section class="nav-image">
         <div class="container">
-            <a name="navigation"></a>
+            <h2>Navigation:</h2>
             <nav>
-                <h2>Navigation:</h3>
-                    <ul>
-                        <li><a href="#about">About myself</a></li>
-                        <li><a href="#skills">What can I do already?</a></li>
-                        <li><a href="#code">Code exsample</a></li>
-                        <li><a href="#education">Education</a></li>
-                        <li><a href="#lang">Languages</a></li>
-                    </ul>
+                <ul>
+                    <li><a href="#contacts">Contacts</a></li>
+                    <li><a href="#about_me">About myself</a></li>
+                    <li><a href="#skills">What can I do already?</a></li>
+                    <li><a href="#code">Code exsample</a></li>                    
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#lang">Languages</a></li>
+                    <li><a href="#project">My projects</a></li>
+                </ul>
             </nav>
         </div>
-        <!--<div class="container">
-            <figure class="user-image">
-                
-                <img src="image/user-giraffe.png" width="928" height="536" alt="User Avatar">
-            </figure>
-        </div>-->
     </section>
 
     <main class="intro container">
-        <a name="about"></a>
+        <div class="container">
+        <a id="about_me"></a>
+        <figure class="user-image-conteiner">
+            <img class="user-image" src="image/user-giraffe.png" alt="My Avatar">
+        </figure>
         <h2>About myself</h2>
         <p>My name is Stanislau. I'm 30. And I'm a giraffe... so... If you need something that is high up, I can help
             you
@@ -60,16 +62,15 @@
             I like handling pictures and everything that is related to design. And I enjoy coding, too. So I got
             interested
             to Frontend Development.</p>
-        <p>I’m interested in Frontend Development because this occupation provides endless possibilities for
+        <p>I am interested in Frontend Development because this occupation provides endless possibilities for
             professional
-            growth, besides there’s a huge amount of free high quality resources for self-education and a large
+            growth, besides there is a huge amount of free high quality resources for self-education and a large
             community of
             developers.</p>
         <p>I believe, that my ability to learn and to gain new skills will lead me through this path of becoming a
             proficient Frontend Developer.</p>
-        <a name="skills"></a>
+        <a id="skills"></a>
         <h2>What can I do already?</h2>
-        <p>
         <ul>
             <li>I have skills in Figma, Adobe Photoshop, Adobe Illustrator</li>
             <li>... have C,C++,C# basic skills</li>
@@ -78,8 +79,7 @@
             <li>... JS basic skills</li>
             <li>... and I know the working basics with Git, GitHub</li>
         </ul>
-        </p>
-        <a name="code"></a>
+        <a id="code"></a>
         <h2>Code exsample</h2>
         <div>
             <pre><code> function multiply(a, b){
@@ -87,29 +87,29 @@
   }
   let result = multiply(5, 3);
   alert(result);</code></pre>
-        </div>
-        <a name="education"></a>
+        </div>        
+        <a id="education"></a>
         <h2>Education:</h2>
-        <p>
         <ul>
             <li>Polotsk State University, Faculty of Information Technologies - Software Engineer</li>
-            <li>Courses:</li>
-            <ul>
-                <li>Andersen. Сourse «Basics of Software Testing»</li>
-                <li>html academy. Сourse «Introduction to HTML and CSS» (in progress)</li>
-                <li>Yandex Practicum. Сourse «Wed Developer» (in progress)</li>
-                <li>RS School. Course «JavaScript/Front-end. Stage 0» (in progress)</li>
-            </ul>
+            <li>Courses:
+                <ul>
+                    <li>Andersen. Сourse «Basics of Software Testing»</li>
+                    <li>html academy. Сourse «Introduction to HTML and CSS» (in progress)</li>
+                    <li>Yandex Practicum. Сourse «Wed Developer» (in progress)</li>
+                    <li>RS School. Course «JavaScript/Front-end. Stage 0» (in progress)</li>
+                </ul>
+            </li>
         </ul>
-        </p>
-        <a name="lang"></a>
+        <a id="lang"></a>
         <h2>Languages:</h2>
-        <p>
         <ul>
             <li>Russian - Native</li>
             <li>English - A2</li>
         </ul>
-        </p>
+        <a id="project"></a>
+        <h2>My projects</h2>
+        <p>Study project <a href="https://badikgit.github.io/portfolio-test/source/project-procrastinate/"><code>"Procrastinate."</code></a></p>
         </div>
     </main>
 
