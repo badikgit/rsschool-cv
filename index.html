@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
     <link rel="stylesheet" href="style.css" type="text/css">
-
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.4.0/styles/default.min.css">
     <title>CV#2. HTML, CSS & Git Basics. Stanislau Yarotski</title>
 </head>
 
@@ -40,7 +40,7 @@
                     <li><a href="#contacts">Contacts</a></li>
                     <li><a href="#about_me">About myself</a></li>
                     <li><a href="#skills">What can I do already?</a></li>
-                    <li><a href="#code">Code exsample</a></li>
+                    <li><a href="#code">Code example</a></li>
                     <li><a href="#education">Education</a></li>
                     <li><a href="#lang">Languages</a></li>
                     <li><a href="#project">My projects</a></li>
@@ -71,13 +71,13 @@
                 <li>... and I know the working basics with Git, GitHub</li>
             </ul>
             <a id="code"></a>
-            <h2>Code exsample</h2>
+            <h2>Code example</h2>
             <div>
-                <pre><code> function multiply(a, b){
-  return a * b;
-  }
-  let result = multiply(5, 3);
-  alert(result);</code></pre>
+                <pre class="code"><code class="javascript">function multiply(a, b){
+    return a * b;
+}
+let result = multiply(5, 3);
+alert(result);</code></pre>
             </div>
             <a id="education"></a>
             <h2>Education:</h2>
@@ -111,6 +111,8 @@
         <a class="footer-github" href="https://github.com/badikgit/">badikgit</a>
         <a class="footer-rsschool" href="https://rs.school/js/"></a>
     </footer>
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </body>
 
 </html>
