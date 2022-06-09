@@ -100,6 +100,7 @@ a {
   from {
     transform: scale(0);
   }
+
   to {
     transform: scale(1);
   }
@@ -145,17 +146,19 @@ a {
   line-height: 120%;
 }
 
-.nav-image .container h2{
+.nav-image .container h2 {
   animation: nav-image-h2-translateX 1.5s ease-in-out 0s 1 normal forwards;
 }
 
 @keyframes nav-image-h2-translateX {
   from {
-    transform: translateX(150%);
+    transform: translateX(200%);
   }
-  50%{
-    transform: translateX(150%);
+
+  50% {
+    transform: translateX(200%);
   }
+
   to {
     transform: translateX(0%);
   }
@@ -168,11 +171,13 @@ a {
 
 @keyframes nav-image-nav-menu-translateX {
   from {
-    transform: translateX(300%);
+    transform: translateX(350%);
   }
-  50%{
-    transform: translateX(300%);
+
+  50% {
+    transform: translateX(350%);
   }
+
   to {
     transform: translateX(0%);
   }
@@ -261,6 +266,136 @@ pre code {
   padding: 5px;
 }
 
+/*Projects*/
+.projects {
+  background-color: #555555;
+  border-radius: 3em;
+  padding: 1em 0;
+  margin: 1em 0 2em;
+  font-size: 1.3em;
+}
+
+.project {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 1em 0;
+}
+
+.project-link,
+.project-link-image {
+  display: flex;
+  transition: 0.3s;
+}
+
+.project-link {
+  width: 100%;
+}
+
+.project-link span {
+  margin: 0 auto;
+  border: 2px solid #292929;
+  border-radius: 10px;
+  line-height: 120%;
+  letter-spacing: 0em;
+  padding: 0.5em 1em;
+  transition: 0.3s;
+  position: relative;
+}
+
+.procrastinate-color{
+  color: white;
+}
+
+.portfolio-color {
+  color: #bdae82;
+}
+
+.movie-app-color {
+  color:#3c48a3;
+}
+.shelter-color {
+  color: #F1CDB3;
+}
+
+.mem-color {
+  color: cornflowerblue;
+}
+
+.keyboard-color {
+  color: mediumturquoise;
+}
+
+.project-link i::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  border: 2px solid currentColor;
+  background-color: #555555;
+  top: 42px;
+  left: 7%;
+  transition: 0.3s;
+}
+
+.project-link i::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  border: 2px solid currentColor;
+  background-color: #555555;
+  top: -5px;
+  left: 85%;
+  transition: 0.3s all;
+}
+
+.project-link span:hover {
+  letter-spacing: 0.3em;
+  color: currentColor;
+  border: 2px solid currentColor;
+  box-shadow: 0 0 3em currentColor;
+  font-weight: 700;
+}
+
+.project-link span:hover i::before {
+  left: 7%;
+}
+
+.project-link span:hover i::after {
+  left: 90%;
+}
+
+.project-link:hover + .project-link-image .project-image {
+  box-shadow: 0 0 3em currentColor;
+  transform: scale(1.8);
+}
+
+.project-link-image:hover .project-image {
+  box-shadow: 0 0 3em currentColor;
+  transform: scale(1.8);
+}
+
+.project-name {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-name code {
+  height: fit-content;
+}
+
+.project-image {
+  width: 50%;
+  margin: 0 auto;
+  transition: 0.3s;
+}
+
+/*Footer*/
 .page-footer {
   display: flex;
   align-items: center;
@@ -286,7 +421,6 @@ pre code {
   width: fit-content;
   transition: 0.3s;
 }
-
 
 .footer-rsschool .footer-icon {
   filter: invert(100%);

@@ -2,9 +2,11 @@
 <html lang="en">
 
 <head>
-  <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css" type="text/css">
-  <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.4.0/styles/default.min.css">
+  <!-- <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.4.0/styles/default.min.css"> -->
   <title>CV#2. HTML, CSS & Git Basics. Stanislau Yarotski</title>
 </head>
 
@@ -30,13 +32,13 @@
         <li class="header-contacts-list-item">
           <a class="header-discord" href="https://discordapp.com/users/399246428871983114/">
             <img class="header-icon" src="./image/icon/icon-discord-header.svg" alt="">
-          <span>truecki#6712</span>
+            <span>truecki#6712</span>
           </a>
         </li>
         <li class="header-contacts-list-item">
           <a class="header-linkedin" href="https://www.linkedin.com/in/yarotski-stanislau/">
             <img class="header-icon" src="./image/icon/icon-linkedin-header.svg" alt="">
-          <span>Stanislau Yarotski</span>
+            <span>Stanislau Yarotski</span>
           </a>
         </li>
       </ul>
@@ -110,7 +112,7 @@ alert(result);</code></pre>
         <li>Courses:
           <ul>
             <li>Andersen. Сourse «Basics of Software Testing»</li>
-            <li>html academy. Сourse «Introduction to HTML and CSS» (in progress)</li>
+            <li>html academy. Сourse «Introduction to HTML and CSS»</li>
             <li>Yandex Practicum. Сourse «Wed Developer»</li>
             <li>RS School. Course «JavaScript/Front-end. Stage 0»</li>
             <li>RS School. Course «JavaScript/Front-end. Stage 1»</li>
@@ -127,24 +129,94 @@ alert(result);</code></pre>
       </ul>
       <a id="project"></a>
       <h2>My projects:</h2>
-      <p>Study project <a
-          href="https://badikgit.github.io/portfolio-test/source/project-procrastinate/"><span>"Procrastinate."</span></a>
-      </p>
-    </div>
+      <section class="projects">
+        <article class="project">
+          <div class="project-name procrastinate-color">
+            <a class="project-link" href="https://badikgit.github.io/portfolio-test/source/project-procrastinate/"
+              target="_blank">
+              <span>Procrastinate.<i></i></span>
+            </a>
+            <a class="project-link-image" href="https://badikgit.github.io/portfolio-test/source/project-procrastinate/"
+              target="_blank">
+              <img class="project-image" src="./image/procrastinate.jpg" alt="Procrastinate">
+            </a>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-name portfolio-color">
+            <a class="project-link" href="https://rolling-scopes-school.github.io/badikgit-JSFEPRESCHOOL/portfolio/"
+              target="_blank">
+              <span>Portfolio<i></i></span>
+            </a>
+            <a class="project-link-image" href="https://rolling-scopes-school.github.io/badikgit-JSFEPRESCHOOL/portfolio/"
+              target="_blank">
+              <img class="project-image" src="./image/portfolio.jpg" alt="Procrastinate">
+            </a>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-name movie-app-color">
+            <a class="project-link" href="https://rolling-scopes-school.github.io/badikgit-JSFEPRESCHOOL/movie-app/"
+              target="_blank">
+              <span>Movie app<i></i></span>
+            </a>
+            <a class="project-link-image" href="https://rolling-scopes-school.github.io/badikgit-JSFEPRESCHOOL/movie-app/"
+              target="_blank">
+              <img class="project-image" src="./image/movie-app.jpg" alt="Procrastinate">
+            </a>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-name shelter-color">
+            <a class="project-link" href="https://rolling-scopes-school.github.io/badikgit-JSFE2022Q1/shelter/pages/main/"
+              target="_blank">
+              <span>Shelter.<i></i></span>
+            </a>
+            <a class="project-link-image" href="https://rolling-scopes-school.github.io/badikgit-JSFE2022Q1/shelter/pages/main/"
+              target="_blank">
+              <img class="project-image" src="./image/shelter.jpg" alt="Procrastinate">
+            </a>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-name mem-color">
+            <a class="project-link" href="https://badikgit.github.io/cssMemSlider/cssMemSlider/"
+              target="_blank">
+              <span>CSS Mem Slider<i></i></span>
+            </a>
+            <a class="project-link-image" href="https://badikgit.github.io/cssMemSlider/cssMemSlider/"
+              target="_blank">
+              <img class="project-image" src="./image/mem.jpg" alt="Procrastinate">
+            </a>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-name keyboard-color">
+            <a class="project-link" href="https://badikgit.github.io/virtual-keyboard/"
+              target="_blank">
+              <span>Virtual Keyboard<i></i></span>
+            </a>
+            <a class="project-link-image" href="https://badikgit.github.io/virtual-keyboard/"
+              target="_blank">
+              <img class="project-image" src="./image/keyboard.jpg" alt="Procrastinate">
+            </a>
+          </div>
+        </article>
+
+      </section>
   </main>
 
   <footer class="page-footer">
-    <span>© 2021</span>
-    <a class="footer-github" href="https://github.com/badikgit/">
+    <span>© 2022</span>
+    <a class="footer-github" href="https://github.com/badikgit/" target="_blank">
       <img src="./image/icon/icon-github-footer.svg" alt="" class="footer-icon">
       <span>badikgit</span>
     </a>
-    <a class="footer-rsschool" href="https://rs.school/js/">
+    <a class="footer-rsschool" href="https://rs.school/js/" target="_blank">
       <img src="https://rs.school/images/rs_school_js.svg" alt="" class="footer-icon">
     </a>
   </footer>
-  <script src="//unpkg.com/@highlightjs/cdn-assets@11.4.0/highlight.min.js"></script>
-  <script>hljs.highlightAll();</script>
+
 </body>
 
 </html>
