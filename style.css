@@ -1,11 +1,15 @@
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
   overflow-x: clip;
+}
+html.active {
+  overflow: hidden;
 }
 
 body {
+  box-sizing: border-box;
   margin: 0;
-  width: 100%;
   font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
   font-size: 16px;
   line-height: 32px;
@@ -14,11 +18,8 @@ body {
   background-image: url("image/hero-bg.jpg");
   background-repeat: no-repeat;
   background-position: top center;
-  overflow-x: hidden;
-}
-
-body.active {
-  overflow: hidden;
+  overflow-x: clip;
+  overflow-inline: clip;
 }
 
 a {
@@ -37,12 +38,9 @@ a {
 .page-header {
   position: absolute;
   top: 0;
-  display: inline-flex;
-  width: 100%;
-  margin: 0 auto;
-  padding: 16px 0 32px;
   background: linear-gradient(180deg, rgba(242, 244, 246, .8) 0%, rgba(242, 244, 246, .9) 20%, rgba(242, 244, 246, 1) 50%, rgba(242, 244, 246, .6) 80%, rgba(242, 244, 246, .1) 100%);
-  font-size: 1rem;
+  padding: 1em 0;
+  width: 100%;
 }
 
 .page-header .container,
@@ -78,11 +76,11 @@ a {
   display: flex;
   width: 100%;
   margin: 0;
+  padding: 0;
   gap: 10px;
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
-  padding: 0;
 }
 
 .header-contacts-list-item {
@@ -135,8 +133,6 @@ a {
 
 .intro {
   margin: 0 0 120px;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
 }
 
 .intro .container {
@@ -165,7 +161,6 @@ a {
   font-size: 2.3rem;
   line-height: 120%;
   position: relative;
-  overflow-x: clip;
 }
 
 .nav-image .container h2 {
@@ -190,7 +185,7 @@ a {
   width: fit-content;
   animation: nav-image-nav-menu-translateX 2s ease-in-out 0s 1 normal;
   position: relative;
-  z-index: 1;
+  z-index: 20;
 }
 
 @keyframes nav-image-nav-menu-translateX {
@@ -207,13 +202,18 @@ a {
   }
 }
 
+.nav-image-overhide {
+  display: none;
+}
+
 .list-item {
   width: fit-content;
   padding: 5px 10px;
   transition: 0.3s;
 }
 
-.list-item:hover {
+.list-item:hover,
+.list-item:focus {
   color: #288be6;
   transform: scale(1.2);
   background-color: rgba(255, 255, 255, 0.6);
@@ -233,7 +233,6 @@ a {
 
 .user-image {
   max-height: 490px;
-  position: absolute;
 }
 
 .container {
@@ -322,7 +321,7 @@ pre code {
 /*Projects*/
 .projects {
   background-color: #555555;
-  border-radius: 3em;
+  border-radius: 2em;
   padding: 1em 0;
   margin: 1em 0 2em;
   font-size: 1.3em;
@@ -557,7 +556,7 @@ pre code {
     position: relative;
     font-size: 1.3rem;
     height: 425px;
-    z-index: 1;
+    z-index: 15;
   }
 
   .user-image-container {
@@ -570,10 +569,16 @@ pre code {
 
 @media screen and (max-width: 684px) {
 
-  .header-discord .header-icon,
+  .header-phone .header-icon {
+    padding-right: 4px;
+  }
+
   .header-linkedin .header-icon {
-    padding-top: 10px;
-    height: 15px;
+    padding-right: 3px;
+  }
+
+  .header-discord .header-icon {
+    padding-right: unset;
   }
 
   .header-contacts-list-item {
@@ -607,17 +612,18 @@ pre code {
 
   .burger {
     display: block;
+    cursor: pointer;
   }
 
   .header-contacts-list-item:nth-child(n + 3) {
+    display: flex;
     width: 100%;
-    padding-left: 100%;
+    justify-content: flex-end;
+    align-items: center;
   }
 
-  .header-contacts-list-item:last-child,
-  .header-contacts-list-item:first-child {
-    width: unset;
-    padding-left: unset;
+  .header-contacts-list-item span {
+    min-width: 8em;
   }
 
   .heading {
@@ -625,29 +631,44 @@ pre code {
     font-size: 32px;
   }
 
+  .nav-menu .list-item {
+    list-style: none;
+  }
+
   .nav-image .nav-menu {
-    height: 350px;
-    left: -150%;
-    transition: left .5s;
-    background-color: #0c4e8b22;
-    height: 100%;
-    z-index: 20;
-    position: fixed;
-    top: -1em;
-    padding-top: 3em;
-    backdrop-filter: blur(10px);
-    font-size: 1.2em;
-    border-radius: 15px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     border: 1px solid rgba(43, 43, 43, 0.268);
-    padding-left: 25%;
+    background-color: #0C4E8B22;
+    backdrop-filter: blur(10px);
+    border-radius: 5%;
+    position: fixed;
+    z-index: 20;
+    height: 100vh;
+    left: -100%;
+    top: 0;
+    padding-right: 0.5em;
+    padding-left: 15%;
+    padding-top: 3em;
+    font-size: 1.2em;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    transition: left .5s;
   }
 
   .nav-image .nav-menu.active {
     left: -10%;
   }
 
+  .list-item:hover,
+  .list-item:focus {
+    transform: unset;
+  }
+
   .user-image {
-    max-height: 300px;
+    max-height: 300px;    
   }
 
   .user-image-container {
@@ -679,6 +700,18 @@ pre code {
 
   .nav-image .container h2 {
     opacity: 0;
+  }
+
+  .nav-image-overhide.active {
+    display: block;
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(43, 43, 43, 0.268);
+    cursor: pointer;
   }
 
   .page-footer {
