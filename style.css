@@ -573,7 +573,8 @@ pre code {
     padding-right: 4px;
   }
 
-  .header-linkedin .header-icon {
+  .header-linkedin .header-icon,
+  .header-email .header-icon {
     padding-right: 3px;
   }
 
